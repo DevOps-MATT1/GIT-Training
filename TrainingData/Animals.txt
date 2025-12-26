@@ -1,0 +1,6 @@
+Animal:
+- Cat
+- Dog
+- Bird
+- Fox
+- Tiger

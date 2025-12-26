@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The World of John Wick</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for the John Wick theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+
+        /* Gold accent color, reminiscent of the coins */
+        .accent-gold {
+            color: #d4af37;
+        }
+        .bg-accent-gold {
+            background-color: #d4af37;
+        }
+        .border-accent-gold {
+            border-color: #d4af37;
+        }
+
+        /* A darker, charcoal-like background for containers */
+        .bg-charcoal {
+            background-color: #1a1a1a;
+        }
+        
+        /* Hero section styles */
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://static0.moviewebimages.com/wordpress/wp-content/uploads/2023/03/john-wick-4-cast-of-characters-with-keanu-reeves-in-center.jpg?q=50&fit=crop&w=1120&h=630&dpr=1.5');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Styles for the interactive movie tabs */
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab-button.active {
+            color: #d4af37;
+            border-bottom-color: #d4af37;
+        }
+        
+        /* Hide tab content by default */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Show active tab content */
+        .tab-content.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Gallery image hover effect */
+        .gallery-image {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <header class="hero min-h-[60vh] flex items-center justify-center text-center p-4">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-wider text-white">The World of</h1>
+            <h2 class="text-6xl md:text-8xl font-black uppercase tracking-widest accent-gold mt-2">John Wick</h2>
+            <p class="mt-6 text-lg md:text-xl text-gray-300">An interactive guide to the High Table, the Continental, and the man they call Baba Yaga.</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Interactive Movie Chapters Section -->
+        <section id="chapters">
+            <h2 class="text-4xl font-bold text-center mb-2">The Chapters</h2>
+            <p class="text-center text-gray-400 mb-12">Select a film to see its story.</p>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center border-b border-gray-700 mb-8 space-x-4 md:space-x-8">
+                <button class="tab-button active text-lg font-semibold py-4 px-2" data-tab="jw1">Chapter 1</button>
+                <button class="tab-button text-lg font-semibold py-4 px-2" data-tab="jw2">Chapter 2</button>
+                <button class="tab-button text-lg font-semibold py-4 px-2" data-tab="jw3">Chapter 3</button>
+                <button class="tab-button text-lg font-semibold py-4 px-2" data-tab="jw4">Chapter 4</button>
+            </div>
+
+            <!-- Tab Content Area -->
+            <div id="tab-container">
+                <!-- John Wick 1 Content -->
+                <div id="jw1" class="tab-content active flex-col md:flex-row items-center gap-8 bg-charcoal p-8 rounded-lg">
+                    <img src="https://edisonfilmhub.cz/DATA/FILMY/MEDIUM_WEBP/john-wick.jpg.webp" alt="John Wick Chapter 1 Poster" class="w-full md:w-1/3 max-w-xs rounded-md shadow-lg">
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-bold accent-gold mb-4">John Wick (2014)</h3>
+                        <p class="text-gray-300 leading-relaxed">When arrogant mobsters steal his prized car and kill the puppy gifted to him by his late wife, legendary hitman John Wick is forced out of retirement. He unleashes a merciless, mythical-level rampage through the New York underworld he once dominated, reminding everyone why he is the one you send to kill the Boogeyman.</p>
+                    </div>
+                </div>
+                <!-- John Wick 2 Content -->
+                <div id="jw2" class="tab-content flex-col md:flex-row items-center gap-8 bg-charcoal p-8 rounded-lg">
+                    <img src="https://resizing.flixster.com/srlmvnaEzqHllvR6WlGZZ6CMtTU=/206x305/v2/https://resizing.flixster.com/t03J-N7iMiWdgqbkRNHNArjDD44=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzcxY2M3ZWE3LTc3Y2ItNDExMS1hNzhkLWJhYTljMzZiZmVkNC53ZWJw" alt="John Wick Chapter 2 Poster" class="w-full md:w-1/3 max-w-xs rounded-md shadow-lg">
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-bold accent-gold mb-4">John Wick: Chapter 2 (2017)</h3>
+                        <p class="text-gray-300 leading-relaxed">Bound by a blood oath to a former associate, John Wick travels to Rome to honor his past. There, he is double-crossed and must fight his way through the world's deadliest assassins. The conflict escalates, putting him in the crosshairs of the High Table and culminating in a shocking act on consecrated ground, making him "excommunicado."</p>
+                    </div>
+                </div>
+                <!-- John Wick 3 Content -->
+                <div id="jw3" class="tab-content flex-col md:flex-row items-center gap-8 bg-charcoal p-8 rounded-lg">
+                    <img src="https://render.fineartamerica.com/images/rendered/default/poster/6/8/break/images/artworkimages/medium/3/john-wick-3-bo-kev.jpg" alt="John Wick Chapter 3 Poster" class="w-full md:w-1/3 max-w-xs rounded-md shadow-lg">
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-bold accent-gold mb-4">John Wick: Chapter 3 – Parabellum (2019)</h3>
+                        <p class="text-gray-300 leading-relaxed">Now excommunicado with a $14 million bounty on his head, John Wick is on the run. With every killer in the world hunting him, he must use every skill and alliance he has to survive the streets of New York, calling on old friends and making new enemies as he fights to clear his name and find a way out from under the High Table.</p>
+                    </div>
+                </div>
+                <!-- John Wick 4 Content -->
+                <div id="jw4" class="tab-content flex-col md:flex-row items-center gap-8 bg-charcoal p-8 rounded-lg">
+                    <img src="https://image.tmdb.org/t/p/original/uzHPb0rITwa44KkhX5Z27cXwmL1.jpg" alt="John Wick Chapter 4 Poster" class="w-full md:w-1/3 max-w-xs rounded-md shadow-lg">
+                    <div class="md:w-2/3">
+                        <h3 class="text-3xl font-bold accent-gold mb-4">John Wick: Chapter 4 (2023)</h3>
+                        <p class="text-gray-300 leading-relaxed">John Wick uncovers a path to defeating the High Table. But before he can earn his freedom, Wick must face off against a new enemy with powerful alliances across the globe and forces that turn old friends into foes. His fight takes him from New York to Paris, Osaka, and Berlin, culminating in a final, high-stakes duel for his life and legacy.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section id="gallery" class="mt-24">
+            <h2 class="text-4xl font-bold text-center mb-12">Gallery of the Baba Yaga</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <img src="https://www.usatoday.com/gcdn/-mm-/33b7d2543d253f6736447d88d3bde2e60b4bb46d/c=0-181-3600-2215/local/-/media/USATODAY/None/2014/10/21/635494961822000008-BEAGLE-JOHN-WICK-MOV-JY-3400--68084492.JPG?width=660&height=373&fit=crop&format=pjpg&auto=webp" alt="John Wick with his dog" class="gallery-image w-full h-full object-cover rounded-lg shadow-lg border-2 border-gray-800">
+                <img src="https://www.indiewire.com/wp-content/uploads/2016/10/john-wick-chapter-2.jpg?w=720&h=480&crop=1" alt="John Wick in a gun-fu action sequence" class="gallery-image w-full h-full object-cover rounded-lg shadow-lg border-2 border-gray-800">
+                <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2023/10/the-continental-john-wick.jpg?q=50&fit=crop&w=1600&h=900&dpr=1.5" alt="John Wick at The Continental hotel" class="gallery-image w-full h-full object-cover rounded-lg shadow-lg border-2 border-gray-800">
+                <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2022/03/John-Wick-completely-raised-the-bar-for-martial-arts-movies.jpg?q=50&fit=crop&w=1440&h=990&dpr=1.5" alt="John Wick looking determined and ready for a fight" class="gallery-image w-full h-full object-cover rounded-lg shadow-lg border-2 border-gray-800">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal mt-20 py-8 border-t border-gray-800">
+        <div class="container mx-auto text-center text-gray-500">
+            <p>&copy; 2024 John Wick Fan Page. All rights reserved.</p>
+            <p class="mt-2 text-sm">Created as an interactive demonstration.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab;
+
+                    // Deactivate all buttons and hide all content
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Activate the clicked button and show the corresponding content
+                    button.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
