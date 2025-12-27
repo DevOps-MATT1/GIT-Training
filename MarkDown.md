@@ -129,7 +129,24 @@ BreakLine : <|br>
 
 ---
 
-# 13. FootNote in MD
+# 13. Code:
+
+```python
+# LangChain: Max iterations
+agent = create_react_agent(llm, tools, max_iterations=5)
+
+# CrewAI: Cost guardrail  
+process = Crew(agents=agents, max_rpm=10)  # Rate limit
+
+# Guardrails AI lib: Output validation
+@guard.validate(assert_type=str)
+def safe_output(result): return result
+```
+
+
+---
+
+# 14. FootNote in MD
 
 Here is a simple footnote[^1].
 A footnote can also have multiple lines[^2].
