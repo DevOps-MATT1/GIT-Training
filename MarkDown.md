@@ -109,11 +109,27 @@ This site was built using [GitHub Pages](https://pages.github.com/)
 | Marvel's The Avengers | May 4, 2012 |
 
 ---
-# 10. Insert Break Statement Line
-'<br>
+
+# 11. Insert Break Statement Line
+BreakLine : <|br>
+
 ---
 
-# 11. FootNote in MD
+# 12. Section:
+
+<details>
+  <summary><b>Note: 🔄 Synthesizer vs Aggregator in Workflow Design Patterns</b></summary>
+   
+**Key characteristics:**
+- Subtasks are dynamically assigned by the Orchestrator
+- Synthesizer deeply analyzes, resolves conflicts, draws conclusions, rephrases, or creates new insights
+- Involves higher-level reasoning and creative combination
+- Goal: Quality + coherence
+</details>
+
+---
+
+# 13. FootNote in MD
 
 Here is a simple footnote[^1].
 A footnote can also have multiple lines[^2].
